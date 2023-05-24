@@ -2,7 +2,7 @@
   <div class="class">
     <ul v-for="student in arrayStudents" :key="student.name">
         <li>
-            {{ student.name }} - {{ student.age }}. Height: {{ student.height }}. Hobby: {{ student.hobby }}.
+            {{ student.name }} - {{ student.age }}. Height: {{ student.height }}. Hobby: {{ student.hobby }}
         </li>
     </ul>
   </div>
@@ -31,7 +31,6 @@ export default defineComponent({
 })
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

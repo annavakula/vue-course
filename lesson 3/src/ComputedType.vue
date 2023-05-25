@@ -1,6 +1,7 @@
 <template>
   <div class="price-block">
     <p>Original Price: {{ originalPrice }}</p>
+    <input type="number" v-model="discount">
     <p>Discount: {{ discount }}</p>
     <p>Final Price: {{ finalPrice }}</p>
   </div>
@@ -15,7 +16,7 @@ export default defineComponent({
   setup() {
 
     const originalPrice = ref(100)
-    const discount = ref(20)
+    const discount = ref(null)
 
     const finalPrice = computed(() => {
       return originalPrice.value - discount.value;

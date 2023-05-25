@@ -4,10 +4,10 @@
         <form @submit.prevent="submitForm">
          <label for="name">Name:</label>
             <input type="text" id="name" v-model="name">
-            <br>
+            <br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" v-model="email">
-            <br>
+            <br><br>
             <button type="submit">Submit</button>
         </form>
         <ul v-if="submissions.length > 0">

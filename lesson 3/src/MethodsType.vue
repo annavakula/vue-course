@@ -8,12 +8,13 @@
             <label for="email">Email:</label>
             <input type="email" id="email" v-model="email">
             <br><br>
-            <button type="submit">Submit</button>
+            <button :disabled="!name || !email" type="submit">Submit</button>
         </form>
         <ul v-if="submissions.length > 0">
             <li v-for="(submission, index) in submissions" :key="index">
                 <p>Name: {{ submission.name }}</p>
                 <p>Email: {{ submission.email }}</p>
+                <button @click="deleteSubmission(index)">Delete</button>
             </li>
         </ul>
     </div>
@@ -30,6 +31,7 @@ export default {
     },
     methods: {
         submitForm() {
+            if (!this.name || !this.email) return
             const newSubmission = {
                 name: this.name,
                 email: this.email
@@ -37,6 +39,9 @@ export default {
             this.submissions.push(newSubmission);
             this.name = '';
             this.email = '';
+        },
+        deleteSubmission(index) {
+            this.submissions.splice(index, 1);
         },
         showMessage() {
             alert("Hello world!");

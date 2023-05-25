@@ -56,3 +56,19 @@ export default {
     }
 }
 </script>
+
+<style>
+form {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: bisque;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: bisque;
+}
+</style>
